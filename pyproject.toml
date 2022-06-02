@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "constantine"
+version = "0.1.0"
+description = "Constantine is my personal manager <3"
+authors = ["zxcinu <sadmonad@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+PyYAML = "^6.0"
+# Poetry does not support installing of prereleases packages via "poetry add":
+# https://github.com/python-poetry/poetry/issues/3538
+# so this line was added by hand
+python-telegram-bot = {version = "20.0a0", allow-prereleases = true}
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+flake8 = "^4.0.1"
+isort = "^5.10.1"
+black = "^22.3.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
